@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Source+Code+Pro:700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background-color: #15161d;
+	padding: 0px;
+	margin: 0px;
+	box-shadow: inset 0px 0px 100000px 0px hsl(293, 36%, 20%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*::selection {
+	color: hsl(0, 0%, 96%);
+	background-color: rgba(20, 20, 20, 0.74);
+}
+
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.wrapper {
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.upper {
+	height: auto;
+	display: flex;
+	position: relative;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: top;
+}
+
+.btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: top;
+	margin-left: 10px;
+	height: 48px;
+	width: 48px;
+}
+
+.btn > button {
+	border: 2px hsl(0, 0%, 70%) solid;
+	border-radius: 3px;
+	background-color: transparent;
+	color: hsl(233, 16%, 20%);
+	display: flex;
+	padding-left: 7px;
+	padding-right: 7px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 200ms ease-in;
+}
+
+.btn > button > span {
+	font-size: 36px;
+}
+
+.btn > button:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.btn > button:active {
+	transform: scale(0.9);
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+.inputs > input {
+	height: 48px;
+	width: 300px;
+	border: 2px hsl(0, 0%, 70%) solid;
+	background-color: rgb(42, 43, 49);
+	color: #ddd;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	padding: 5px;
+}
+
+.inputs > input:not(:first-child) {
+	margin-top: 10px;
+}
+
+/* LIST */
+
+.list {
+	color: hsl(0, 0%, 70%);
+	font-family: 'Roboto Mono', monospace;
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	transform: translate(-50%, -50%);
+}
+
+.list > ul {
+	list-style-type: none;
+	border-left: hsl(0, 0%, 70%) solid 2px;
+}
+.list > ul > li:not(:first-child) {
+	padding-top: 10px;
+}
+.list > ul > li:hover {
+	cursor: pointer;
+	color: hsl(0, 0%, 96%);
+}
+.selected {
+	color: hsl(0, 0%, 96%);
+}
+
+@media (max-width: 1500px) {
+	.list {
+		margin-left: 0%;
+		position: relative;
+		padding-top: 3em;
+		font-size: 12px;
+	}
+
+	.list > ul {
+		padding-left: 20px;
+	}
+
+	.wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 940px) {
+	.upper {
+		height: 60%;
+	}
+
+	.inputs,
+	.btn {
+		justify-content: flex-end;
+	}
+
+	.list {
+		width: 50%;
+		height: auto;
+	}
+
+	.inputs > input {
+		font-size: 12px;
+		height: 20px;
+		width: 200px;
+		padding: 5px;
+	}
+
+	.material-symbols-outlined {
+		font-size: 14px !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.list {
+		width: 100%;
+		height: auto;
+		padding-top: 1em;
+	}
+
+	.window {
+		width: 70%;
+		height: 100%;
+		margin-left: 15%;
+	}
+}
