@@ -1,2 +1,2 @@
 # Kryptologie
-Eine kleine Webseite. um ein paar einfache Verschlüsselungsverfahren auszuprobieren.
+Eine kleine Webseite, um ein paar einfache Verschlüsselungsverfahren auszuprobieren.
